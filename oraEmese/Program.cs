@@ -51,7 +51,10 @@ namespace oraEmese
             Console.WriteLine("\", ez egy idézőjel");
 
 
+
+
             //Padding
+
             //Csakis stringeknél lehet használni
             //PadLeft(hossz, kitöltő), a "kitöltő" opcionális,
             //ha nem adsz meg semmit akkor szóköz lesz az alap értéke
