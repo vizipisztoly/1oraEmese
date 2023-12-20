@@ -36,6 +36,8 @@ namespace oraEmese
             const double pi = 3.14159265359;
             const string koszonto = "Üdvözlez!";
 
+
+
             //Kiiratás
             Console.WriteLine("");  //A zárójelen belűre szinte bármi kerülhet,
                                     //legyen az egy string, egy int, egy double,
@@ -50,6 +52,26 @@ namespace oraEmese
                                     // akkor rakjunk elé egy \ jelet, helyes használata:
             Console.WriteLine("\", ez egy idézőjel");
 
+            //A kiíratásban való elemek összefűzése a + jellel
+            Console.WriteLine("Hello" + " " + "world! " + 10 + " " + true);
+            //Viszont ezzel vigyázni kell ha változókat használunk
+            string szam1 = "4";
+            string szam2 = "5";
+            Console.WriteLine(szam1+szam2);
+            //Először azt várhatnánk el, hogy 4+5= 9-et ad majd vissza a program,
+            //de mivel stringekkel dolgozunk, ezért "4"+"5" --> "45", összefűzi a stringeket
+            int szam3 = 4;
+            int szam4 = 5;
+            Console.WriteLine(szam3+szam4);
+            //Ez viszont tényleg 4+5= 9-et ad vissza
+
+            //A kiíratásban való elemek összefűzése az "órai" módszerrel
+            string today = "great";
+            Console.WriteLine("Hello world! Today is a {0} day", today);
+            Console.WriteLine("A stringek összeadása: \"{0}\"+\"{1}\"=\"{2}\"", szam1, szam2, szam1+szam2);
+            Console.WriteLine("Az intek összeadása: {0}+{1}={2}", szam3, szam4, szam3 + szam4);
+            //A {} közé írjuk, hogy hanyadik elemet akarjuk kiíratni, MINDIG 0-val indulunk
+            //("{0}, {1}", 0ikElem, 1ikElem), a formázásokról később lesz még említés
 
 
 
