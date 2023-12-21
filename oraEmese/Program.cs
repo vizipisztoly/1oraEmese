@@ -36,6 +36,16 @@ namespace oraEmese
             const double pi = 3.14159265359;
             const string koszonto = "Üdvözlez!";
 
+            //A változók típusának közötti való váltás
+            //"Automatikus" váltás
+            int a = 10;
+            double b = a;       //Ez a két sor az int a-t átalakítja egy double-é és azt a b-ben tárolja el
+            //Manuális átváltás
+            string c = "15";
+            int d = int.Parse(c);   //Ebben a két sorban egy string alapú számot alakít át int-té,
+                                    //ha a string tartalmaz nem szám karaktert, akkor a program hibát fog dobni
+
+
 
 
             //Kiiratás
@@ -72,6 +82,14 @@ namespace oraEmese
             Console.WriteLine("Az intek összeadása: {0}+{1}={2}", szam3, szam4, szam3 + szam4);
             //A {} közé írjuk, hogy hanyadik elemet akarjuk kiíratni, MINDIG 0-val indulunk
             //("{0}, {1}", 0ikElem, 1ikElem), a formázásokról később lesz még említés
+
+            //String interpolation
+            //Hasonló az előző módszerhez, anny különbséggel hogy a string elé egy "$" jelet teszünk,
+            //majd utánna a stringen belül a {} zárójelekbe nem az indexeket, hanem közvetlenül a változókat, műveleteket, stb.-t írjuk
+            Console.WriteLine($"4+5={4+5}");
+            Console.WriteLine($"Hello world! Today is a {today} day");
+            //A {}zárójelen belül ugyanúgy lehet formázni a változókat, stringeket
+
 
 
 
