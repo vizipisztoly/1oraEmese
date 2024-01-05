@@ -96,7 +96,7 @@ namespace oraEmese
             //Ha valamit VALAHÁNYSZOR kell lefuttatnunk akkor "for" ciklust szoktunk használni
             //for (változó létrehozása, meddig változassa a változót, változó változtatása (pl.:növelés, csökkentés, stb))
             //{}-ben lévő rész addig fut le, annyiszor fut le, amíg teljesül a változóra megadott feltétel
-            //ez a "length" lehet egy szám, (egy lista hossza,) egy tömb hossza, egy string hossza, stb.
+            //ez a "length" lehet egy szám, (egy lista hossza,) egy tömb(array) hossza, egy string hossza, stb.
             //break; parancs viszont meg tudja állítani a futását bármikor
             int length = 10;
             for (int i = 0; i < length; i++)
@@ -112,6 +112,16 @@ namespace oraEmese
             {
 
             }
+
+            //Tömbök(array-ek)
+            //Egydimenziós tömb létrehozása, amiben 5 számot lehet eltárolni
+            int[] tomb1 = new int[5];
+
+            tomb1[0] = 1;       //A tömbök indexelése/számozása 0-tól indul MINDIG
+            tomb1[1] = 2;       //Itt most a tömböt 1-től 5-ig töltöttem fel számokkal
+            tomb1[2] = 3;       //Ezt egy "for" ciklussal könnyebben is meglehetett volna tenni
+            tomb1[3] = 4;       //for (let i = 1; i <= 5; i++) {tomb1[i-1] = i}
+            tomb1[4] = 5;
 
 
 
