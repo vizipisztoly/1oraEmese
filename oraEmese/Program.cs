@@ -75,6 +75,46 @@ namespace oraEmese
             Console.WriteLine(szam3+szam4);
             //Ez viszont tényleg 4+5= 9-et ad vissza
 
+
+
+            //if használata     Ha a ()-en belül lévő változó "igaz"-at ad vissza,a "ha" része fut le az "if"-nek
+            //                  Ezen kívül még lehet írni egy else {} részt (ez csak opcionális) is az "if"-nek, ez akkor fut le,
+            //                  ha a feltétel nem teljesült a ()-ben             
+            if (true)       
+            {
+                //"ha" része az "if"-nek
+            }
+            else
+            {
+                //"különben" része az "if"-nek, csak akkor fut le, ha a feltétel nem teljesült
+            }
+
+
+
+            //Ciklusok  for && while (&& do {}while)
+
+            //Ha valamit VALAHÁNYSZOR kell lefuttatnunk akkor "for" ciklust szoktunk használni
+            //for (változó létrehozása, meddig változassa a változót, változó változtatása (pl.:növelés, csökkentés, stb))
+            //{}-ben lévő rész addig fut le, annyiszor fut le, amíg teljesül a változóra megadott feltétel
+            //ez a "length" lehet egy szám, (egy lista hossza,) egy tömb hossza, egy string hossza, stb.
+            //break; parancs viszont meg tudja állítani a futását bármikor
+            int length = 10;
+            for (int i = 0; i < length; i++)
+            {
+
+            }
+
+            //Ha valamit VALAMEDDIG kell futtatni, akkor "while" cilklust használunk
+            //while (feltétel)
+            //{}-ben lévő rész egészen addig fut, amíg a "feltétel" igaz
+            //break; parancs viszont meg tudja állítani a futását bármikor
+            while (true)    //Ebben az esetben a végtelenségig fog futni, vagy addig amíg nem rakunk bele valahol egy break;-et
+            {
+
+            }
+
+
+
             //A kiíratásban való elemek összefűzése az "órai" módszerrel
             string today = "great";
             Console.WriteLine("Hello world! Today is a {0} day", today);
