@@ -43,8 +43,9 @@ namespace oraEmese
             //Manuális átváltás
             string c = "15";
             int d = int.Parse(c);   //Ebben a két sorban egy string alapú számot alakít át int-té,
-                                    //ha a string tartalmaz nem szám karaktert, akkor a program hibát fog dobni
-
+            int e = 20;             //ha a string tartalmaz nem szám karaktert, akkor a program hibát fog dobni
+            string f = e.ToString();
+            Console.WriteLine(e.GetType()); 
 
 
 
@@ -80,7 +81,7 @@ namespace oraEmese
             //if használata     Ha a ()-en belül lévő változó "igaz"-at ad vissza,a "ha" része fut le az "if"-nek
             //                  Ezen kívül még lehet írni egy else {} részt (ez csak opcionális) is az "if"-nek, ez akkor fut le,
             //                  ha a feltétel nem teljesült a ()-ben             
-            if (true)       
+            if (szam3 > 5)       
             {
                 //"ha" része az "if"-nek
             }
@@ -89,7 +90,72 @@ namespace oraEmese
                 //"különben" része az "if"-nek, csak akkor fut le, ha a feltétel nem teljesült
             }
 
+            int aa;
+            aa = int.Parse(Console.ReadLine());
+            
+            switch (aa)
+                {
+                case 0:
+                    Console.WriteLine(0);
+                    break;
+                case 2 | 3:     //| --> AltGR + W   | == vagy
+                    Console.WriteLine("Prímek");
+                    break;
+                case 4:
+                case 6:
+                    Console.WriteLine("Nem prímek");
+                    break;
+                default:
+                    Console.WriteLine("valami");
+                    break;
+            }
 
+            if (aa == 0)
+            {
+                Console.WriteLine();
+            }
+            else if (aa == 1)
+            {
+
+            }
+            else if(aa == 2)
+            {
+
+            }
+
+
+            if (true)
+            {
+
+            }
+
+            if (true)
+            {
+
+            }
+            string aaa = Console.ReadLine();
+
+
+
+            //Írd ki a számokat 45-től 66-ig
+
+
+            //Kezd el a számokat 1-től haladva összeszorozni,
+            //addig amíg a szorzatuk kisebb mint 300,
+            //a számokat és azorzatukat is írd ki
+            // a*a=a^2
+            // 2*2=4
+            //Írd ki a legnagyobb számot, aminek szorzata még pont nem 300
+            //Írd ki a legkisebb számot, aminek szorzata pont meghaladja a 300-at,
+            //és ez a szám mennyivel nagyobb mint 300
+            int szorzat = 1;
+            while (szorzat*szorzat<300)
+            {
+                Console.WriteLine(szorzat +"*"+szorzat+"="+ szorzat * szorzat);
+                szorzat++;
+            }
+            Console.WriteLine(szorzat-1);
+            Console.WriteLine(szorzat);
 
             //Ciklusok  for && while (&& do {}while)
 
@@ -99,7 +165,7 @@ namespace oraEmese
             //ez a "length" lehet egy szám, (egy lista hossza,) egy tömb(array) hossza, egy string hossza, stb.
             //break; parancs viszont meg tudja állítani a futását bármikor
             int length = 10;
-            for (int i = 0; i < length; i++)
+            for (int i = 0; i < length; i++)        //i++ = i+1     i-- = i-1
             {
 
             }
@@ -110,7 +176,7 @@ namespace oraEmese
             //break; parancs viszont meg tudja állítani a futását bármikor
             while (true)    //Ebben az esetben a végtelenségig fog futni, vagy addig amíg nem rakunk bele valahol egy break;-et
             {
-
+                break;
             }
 
             //Tömbök(array-ek)
