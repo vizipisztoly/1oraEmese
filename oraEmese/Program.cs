@@ -259,17 +259,14 @@ namespace oraEmese
                     harommal++;
                 }
 
-                if (i % 5 == 1)
+                if (i % 5 == 0)
                 {
                     ottel++;
                 }
 
-                if (i % 3 == 1)
+                if (i % 3 == 0 && i % 5 == 0)
                 {
-                    if (i%5 == 0)
-                    {
-                        harommalEsOttel++;
-                    }
+                    harommalEsOttel++;
                 }
 
                 Console.WriteLine("Hárommal:");
