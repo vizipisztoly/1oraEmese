@@ -179,6 +179,11 @@ namespace oraEmese
                 break;
             }
 
+
+            //Speckó műveletek
+            //  // --> maradék nélküli osztás,
+            //  % --> a maradékot adja vissza
+
             //Tömbök(array-ek)
             //Egydimenziós tömb létrehozása, amiben 5 számot lehet eltárolni
             int[] tomb1 = new int[5];
