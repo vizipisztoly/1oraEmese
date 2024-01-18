@@ -183,6 +183,8 @@ namespace oraEmese
             //Speckó műveletek
             //  // --> maradék nélküli osztás,
             //  % --> a maradékot adja vissza
+            //  ^ --> hatványozás
+            //  Math.Sqrt() --> gyökvonás
 
             //Tömbök(array-ek)
             //Egydimenziós tömb létrehozása, amiben 5 számot lehet eltárolni
