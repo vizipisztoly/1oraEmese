@@ -181,10 +181,16 @@ namespace oraEmese
 
 
             //Speckó műveletek
-            //  // --> maradék nélküli osztás,
-            //  % --> a maradékot adja vissza
-            //  ^ --> hatványozás
-            //  Math.Sqrt() --> gyökvonás
+            //  % --> a maradékot adja vissza --> 1%3 = 1
+            //  ^ --> hatványozás --> 3^2 = 9
+            //  Math.Sqrt() --> gyökvonás --> Math.Sqrt(25) = 5
+
+            //1-től 100-ig kiírja az összes 7-el osztahtó egész számot
+            for (int i = 1; i < 101; i++)
+            {
+                if (i % 7 == 0) { Console.WriteLine(i); }
+            }
+
 
             //Tömbök(array-ek)
             //Egydimenziós tömb létrehozása, amiben 5 számot lehet eltárolni
@@ -196,7 +202,82 @@ namespace oraEmese
             tomb1[3] = 4;       //for (let i = 1; i <= 5; i++) {tomb1[i-1] = i}
             tomb1[4] = 5;
 
+            Console.WriteLine(tomb1[3]);
 
+            int hossz = tomb1.Length;// --> Visszaadja a tömb hosszát
+
+
+            //Egy tömböt tölts fel számokkal 1000-től 10000-ig
+            //Mennyi 7-el osztható szám van benne
+
+            int[] tomb2 = new int[10000];
+            int hettelOszthato = 0;
+            for (int i = 1000; i < 10000; i++)
+            {
+                tomb2[i-1000] = i;
+                if (i % 7 == 0) {  hettelOszthato++; }
+            }
+            Console.WriteLine(hettelOszthato);
+
+            //Az összes 6-al osztható számot emeljük a négyzetre
+
+            for (int i = 0; i < tomb2.Length; i++)
+            {
+                if (tomb2[i] % 6 == 0)
+                {
+                    tomb2[i] = tomb2[i] * tomb2[i];
+                    
+                }
+            }
+
+            foreach (int i in tomb2)    //foreach (int i in "tömb") {} i, egyessével kiszedi az elemeket
+            {
+                Console.WriteLine(i);
+            }
+
+            //Adott egy lista, amiben van 30 véletlenszerű szám 0 és 500 között
+            //Írd ki hogy mennyi elem van benne, hány 3-al osztható van benne
+            //, hány 5-el osztható van benne és hány 3-al és 5-el is
+            //osztható szám van benne
+
+            int[] megadottTomb = new int[30];
+            var rnd = new Random();
+            for (int i = 0; i < 30; i++)
+            {
+                megadottTomb[i] = rnd.Next(0,500);
+            }
+            foreach (int i in megadottTomb) { Console.WriteLine(i); }
+            int tombHossza = megadottTomb.Length;
+            int harommal = 0;
+            int ottel = 0;
+            int harommalEsOttel = 0;
+
+            foreach (int i in megadottTomb)
+            {
+                if (i % 3 == 0)
+                {
+                    harommal++;
+                }
+
+                if (i % 5 == 1)
+                {
+                    ottel++;
+                }
+
+                if (i % 3 == 1)
+                {
+                    if (i%5 == 0)
+                    {
+                        harommalEsOttel++;
+                    }
+                }
+
+                Console.WriteLine("Hárommal:");
+                Console.WriteLine(harommal);
+                Console.WriteLine("Öttel:");
+                Console.WriteLine(ottel);
+                Console.WriteLine("Hárommal és öttel:");
+                Console.WriteLine(harommalEsOttel);
 
             //A kiíratásban való elemek összefűzése az "órai" módszerrel
             string today = "great";
@@ -246,6 +327,15 @@ namespace oraEmese
             Console.WriteLine(value2);
             //Output:
             //42
+
+
+
+
+            //Append
+            // valami.Append(x)
+            //az x elemet beleteszi a listába [1,2,3,4] -->
+            //Append(1) --> [1,2,3,4,1]
+
 
             Console.ReadKey();
         }
