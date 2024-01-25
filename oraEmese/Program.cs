@@ -276,18 +276,71 @@ namespace oraEmese
                 Console.WriteLine("Hárommal és öttel:");
                 Console.WriteLine(harommalEsOttel);
 
+
+
+
+
+
             //A kiíratásban való elemek összefűzése az "órai" módszerrel
             string today = "great";
             Console.WriteLine("Hello world! Today is a {0} day", today);
             Console.WriteLine("A stringek összeadása: \"{0}\"+\"{1}\"=\"{2}\"", szam1, szam2, szam1+szam2);
             Console.WriteLine("Az intek összeadása: {0}+{1}={2}", szam3, szam4, szam3 + szam4);
-            //A {} közé írjuk, hogy hanyadik elemet akarjuk kiíratni, MINDIG 0-val indulunk
-            //("{0}, {1}", 0ikElem, 1ikElem), a formázásokról később lesz még említés
+                //A {} közé írjuk, hogy hanyadik elemet akarjuk kiíratni, MINDIG 0-val indulunk
+                //("{0}, {1}", 0ikElem, 1ikElem), a formázásokról később lesz még említés
 
-            //String interpolation
-            //Hasonló az előző módszerhez, anny különbséggel hogy a string elé egy "$" jelet teszünk,
-            //majd utánna a stringen belül a {} zárójelekbe nem az indexeket, hanem közvetlenül a változókat, műveleteket, stb.-t írjuk
-            Console.WriteLine($"4+5={4+5}");
+                //Kérjünk be 2 számot, adjuk össze, majd írjuk ki a következő formában
+                // 1 + 2 = 3 
+                //Kérdezzük meg a felhasználtótól, hogy milyen további műveleteket
+                //csináljunk a 2 számmal (-, *, /, %, Pow, Sqrt)
+                //Math.Pow("mit", "mire")
+                //Console.WriteLine("{0} - {1} = {2}", szam1, szam2, szam1-szam2)
+
+
+
+                //Kérjünk be a felhasználótól egy induló és egy befejező számot
+                //kérjünk be egy másik számot ami az előző kettő között van
+                //majd számoljuk meg hogy hány olyan szám van az értelemezési
+                //tartományban amivel osztható a 3. bekért szám
+                //Ezeket tároljuk el egy tömb-ben majd írjuk ki őket és hogy
+                //hány ilyen szám van, a kiíratást a tömbön keresztül végezd el!
+
+                int szam01 = int.Parse(Console.ReadLine());
+                int szam02 = int.Parse(Console.ReadLine());
+                int szam03 = int.Parse(Console.ReadLine());
+
+                int[] szamokTomb = new int[szam02-szam01];
+
+                int j  =0;
+                for (int q = szam01; q < szam02; q++)
+                {
+                    if (q % szam03 == 0)
+                    {
+                        szamokTomb[j] = q;
+                        j++;
+                    }
+                }
+
+                foreach (int q in szamokTomb)
+                {
+                    Console.WriteLine(q);
+                }
+                Console.WriteLine(szamokTomb.Length);
+
+
+
+
+
+
+
+
+
+
+
+                //String interpolation
+                //Hasonló az előző módszerhez, anny különbséggel hogy a string elé egy "$" jelet teszünk,
+                //majd utánna a stringen belül a {} zárójelekbe nem az indexeket, hanem közvetlenül a változókat, műveleteket, stb.-t írjuk
+                Console.WriteLine($"4+5={4+5}");
             Console.WriteLine($"Hello world! Today is a {today} day");
             //A {}zárójelen belül ugyanúgy lehet formázni a változókat, stringeket
 
